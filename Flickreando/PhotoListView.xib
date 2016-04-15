@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoListViewController" customModule="Flickreando" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="AzM-yt-7Sd" id="IRV-jn-XYL"/>
+                <outlet property="layout" destination="mGb-tq-L4m" id="ZAc-tN-jLx"/>
+                <outlet property="navBar" destination="sgJ-eK-xbY" id="FQX-Df-MIS"/>
+                <outlet property="searchBar" destination="56b-KM-v9z" id="WCc-MV-2yf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqP-iB-1S7">
+                    <rect key="frame" x="0.0" y="15" width="600" height="44"/>
+                    <items>
+                        <navigationItem title="Title" id="sgJ-eK-xbY"/>
+                    </items>
+                </navigationBar>
+                <searchBar contentMode="redraw" placeholder="Type a tag" translatesAutoresizingMaskIntoConstraints="NO" id="56b-KM-v9z">
+                    <rect key="frame" x="0.0" y="59" width="600" height="44"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="opC-jR-JKd"/>
+                    </connections>
+                </searchBar>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="AzM-yt-7Sd">
+                    <rect key="frame" x="0.0" y="103" width="600" height="497"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mGb-tq-L4m">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="hqP-iB-1S7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5Yc-Xq-scG"/>
+                <constraint firstItem="56b-KM-v9z" firstAttribute="leading" secondItem="hqP-iB-1S7" secondAttribute="leading" id="AJ3-K7-kvh"/>
+                <constraint firstItem="56b-KM-v9z" firstAttribute="trailing" secondItem="hqP-iB-1S7" secondAttribute="trailing" id="EL4-Wl-gB4"/>
+                <constraint firstAttribute="bottom" secondItem="AzM-yt-7Sd" secondAttribute="bottom" id="QF7-lT-AAm"/>
+                <constraint firstItem="56b-KM-v9z" firstAttribute="top" secondItem="hqP-iB-1S7" secondAttribute="bottom" id="Tom-XB-rea"/>
+                <constraint firstAttribute="trailing" secondItem="AzM-yt-7Sd" secondAttribute="trailing" id="Unp-ut-CXR"/>
+                <constraint firstItem="AzM-yt-7Sd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eV8-2B-pPA"/>
+                <constraint firstItem="AzM-yt-7Sd" firstAttribute="top" secondItem="56b-KM-v9z" secondAttribute="top" constant="44" id="iai-lZ-UhT"/>
+                <constraint firstAttribute="trailing" secondItem="hqP-iB-1S7" secondAttribute="trailing" id="jVo-yB-td2"/>
+                <constraint firstItem="56b-KM-v9z" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="59" id="p1U-yW-HMm"/>
+                <constraint firstItem="56b-KM-v9z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qvu-T3-FQG"/>
+                <constraint firstAttribute="trailing" secondItem="56b-KM-v9z" secondAttribute="trailing" id="vyo-DK-2gz"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
