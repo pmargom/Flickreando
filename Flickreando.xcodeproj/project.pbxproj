@@ -14,7 +14,6 @@
 		790984651CC0FFE200F91849 /* PhotoCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 790984641CC0FFE200F91849 /* PhotoCellView.xib */; };
 		790984681CC10D2E00F91849 /* placeHolderImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 790984671CC10D2E00F91849 /* placeHolderImage.png */; };
 		7909846A1CC115A800F91849 /* placeHolderImageSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 790984691CC115A800F91849 /* placeHolderImageSmall.png */; };
-		790984721CC13B6900F91849 /* PhotoPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 790984711CC13B6900F91849 /* PhotoPageView.xib */; };
 		7909847B1CC144EA00F91849 /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790984791CC144EA00F91849 /* PhotoDetailsViewController.swift */; };
 		7909847C1CC144EA00F91849 /* PhotoDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7909847A1CC144EA00F91849 /* PhotoDetailsView.xib */; };
 		793273F61CBEB9B6000C191C /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793273F41CBEB9B6000C191C /* PhotoListViewController.swift */; };
@@ -59,7 +58,6 @@
 		790984641CC0FFE200F91849 /* PhotoCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCellView.xib; sourceTree = "<group>"; };
 		790984671CC10D2E00F91849 /* placeHolderImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeHolderImage.png; sourceTree = "<group>"; };
 		790984691CC115A800F91849 /* placeHolderImageSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeHolderImageSmall.png; sourceTree = "<group>"; };
-		790984711CC13B6900F91849 /* PhotoPageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoPageView.xib; sourceTree = "<group>"; };
 		790984791CC144EA00F91849 /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
 		7909847A1CC144EA00F91849 /* PhotoDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoDetailsView.xib; sourceTree = "<group>"; };
 		793273F41CBEB9B6000C191C /* PhotoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 			children = (
 				793273F51CBEB9B6000C191C /* PhotoListView.xib */,
 				790984641CC0FFE200F91849 /* PhotoCellView.xib */,
-				790984711CC13B6900F91849 /* PhotoPageView.xib */,
 				7909847A1CC144EA00F91849 /* PhotoDetailsView.xib */,
 				79F13C921CC180A700DCFD99 /* Launch Screen.storyboard */,
 			);
@@ -320,7 +317,6 @@
 				7909847C1CC144EA00F91849 /* PhotoDetailsView.xib in Resources */,
 				790984651CC0FFE200F91849 /* PhotoCellView.xib in Resources */,
 				790984681CC10D2E00F91849 /* placeHolderImage.png in Resources */,
-				790984721CC13B6900F91849 /* PhotoPageView.xib in Resources */,
 				793273F71CBEB9B6000C191C /* PhotoListView.xib in Resources */,
 				79F13C951CC1816F00DCFD99 /* flickreando_launch.png in Resources */,
 			);
