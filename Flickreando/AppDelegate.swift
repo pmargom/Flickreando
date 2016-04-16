@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         // Override point for customization after application launch.
+        // hide page view controller page indicator
+        UIPageControl.appearance().pageIndicatorTintColor = UIColor.blackColor()
+        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor.blackColor()
         
         let photoListController = PhotoListViewController(nibName: "PhotoListView", bundle: nil)
         

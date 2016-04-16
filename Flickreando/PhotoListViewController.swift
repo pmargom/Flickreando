@@ -101,6 +101,12 @@ class PhotoListViewController: UIViewController, UICollectionViewDataSource, UIC
         
         let index = indexPath.row % photos!.count
         
+        showModal(index)
+        
+    }
+    
+    func showModal(index: Int) {
+        
         photoPageViewController = PhotoPageViewController(nibName: "PhotoPageView", bundle: nil)
         photoPageViewController!.dataSource = self
         

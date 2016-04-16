@@ -21,7 +21,7 @@ class PhotoPageViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor.blackColor()
     }
 
     override func didReceiveMemoryWarning() {
