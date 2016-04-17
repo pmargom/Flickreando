@@ -18,13 +18,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="fTS-eL-Yi3">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="600" id="Xsp-et-szI"/>
-                    </constraints>
+                    <rect key="frame" x="0.0" y="54" width="600" height="546"/>
                 </imageView>
                 <navigationBar contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1d9-D1-DMR">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="54"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="Dha-88-PBx"/>
+                    </constraints>
                     <items>
                         <navigationItem title="Title" id="loc-jc-CDD"/>
                     </items>
@@ -32,15 +32,15 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="1d9-D1-DMR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="0Ai-Vq-SmQ"/>
-                <constraint firstAttribute="trailing" secondItem="1d9-D1-DMR" secondAttribute="trailing" id="3Xq-KI-plc"/>
-                <constraint firstItem="1d9-D1-DMR" firstAttribute="leading" secondItem="fTS-eL-Yi3" secondAttribute="leading" id="9NT-ny-8Cq"/>
-                <constraint firstItem="1d9-D1-DMR" firstAttribute="trailing" secondItem="fTS-eL-Yi3" secondAttribute="trailing" id="BCU-jo-60g"/>
-                <constraint firstAttribute="trailing" secondItem="fTS-eL-Yi3" secondAttribute="trailing" id="Frm-sI-9sj"/>
-                <constraint firstAttribute="bottom" secondItem="fTS-eL-Yi3" secondAttribute="bottom" id="OsF-Rp-T7c"/>
-                <constraint firstItem="fTS-eL-Yi3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="moh-Mt-Fgt"/>
-                <constraint firstItem="1d9-D1-DMR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="noN-oN-8lT"/>
+                <constraint firstItem="1d9-D1-DMR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="13Y-r3-IH4"/>
+                <constraint firstAttribute="trailing" secondItem="1d9-D1-DMR" secondAttribute="trailing" id="Hk8-mK-Kh3"/>
+                <constraint firstItem="fTS-eL-Yi3" firstAttribute="leading" secondItem="1d9-D1-DMR" secondAttribute="leading" id="MDc-DY-cHz"/>
+                <constraint firstItem="1d9-D1-DMR" firstAttribute="bottom" secondItem="fTS-eL-Yi3" secondAttribute="top" id="SPG-D6-XNb"/>
+                <constraint firstItem="1d9-D1-DMR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Z3l-Oj-Rvn"/>
+                <constraint firstItem="fTS-eL-Yi3" firstAttribute="trailing" secondItem="1d9-D1-DMR" secondAttribute="trailing" id="gCm-Bq-j3U"/>
+                <constraint firstAttribute="bottom" secondItem="fTS-eL-Yi3" secondAttribute="bottom" id="ut5-sM-z5O"/>
             </constraints>
+            <point key="canvasLocation" x="225" y="420"/>
         </view>
     </objects>
     <resources>
