@@ -25,7 +25,7 @@ class PhotoDetailsViewController: UIViewController {
     func updateUI() {
         
         self.navBar.title = photo?.title
-        let closeAction = UIBarButtonItem(title: "close", style: .Plain, target: self, action: "closeAction")
+        let closeAction = UIBarButtonItem(title: "close", style: .Plain, target: self, action: #selector(PhotoDetailsViewController.closeAction))
         closeAction.tintColor = UIColor.whiteColor()
         
         self.navBar.rightBarButtonItem = closeAction

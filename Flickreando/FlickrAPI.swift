@@ -41,7 +41,7 @@ class FlickrAPI {
         
         let apiUrl = NSURL(string: endPoint)
         
-        let task = session.dataTaskWithURL(apiUrl!) { (data, response, error) -> Void in
+        let task = session.dataTaskWithURL(apiUrl!) { (data, response, error) in
             
             if error != nil {
                 print(error?.localizedDescription)

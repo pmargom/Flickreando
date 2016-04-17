@@ -48,7 +48,7 @@ class PhotoListViewController: UIViewController, UICollectionViewDataSource, UIC
     
     // MARK: Setup UI
     
-    func setupUI() -> Void {
+    func setupUI() {
         
         self.navBar.title = "Flickreando"
         
@@ -64,7 +64,7 @@ class PhotoListViewController: UIViewController, UICollectionViewDataSource, UIC
     
     // MARK: Cell registration
     
-    func registerCustomCell() -> Void {
+    func registerCustomCell() {
         
         let nibPhotoCellView = UINib(nibName: "PhotoCellView", bundle: nil)
         self.collectionView.registerNib(nibPhotoCellView, forCellWithReuseIdentifier: self.CellId)
@@ -74,12 +74,28 @@ class PhotoListViewController: UIViewController, UICollectionViewDataSource, UIC
     // MARK: Search bar methods
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        
-        self.photos = []
-        self.collectionView.reloadData()
 
         loadDataFromApi(searchBar.text!)
         
+    }
+    
+    func searchBarShouldBeginEditing(searchBar: UISearchBar) -> Bool {
+        searchBar.showsCancelButton = true
+        return true
+    }
+    
+    func searchBarShouldEndEditing(searchBar: UISearchBar) -> Bool {
+        searchBar.showsCancelButton = false
+        return true
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        deActivateSearchBar()
+    }
+    
+    func deActivateSearchBar() {
+        searchBar.showsCancelButton = false
+        searchBar.resignFirstResponder()
     }
     
     // MARK: UICollectionViewController methods
@@ -92,6 +108,7 @@ class PhotoListViewController: UIViewController, UICollectionViewDataSource, UIC
         cell.imageView?.image = UIImage(named: PLACE_HOLDER_IMAGE_SMALL)
         cell.titleLabel?.text = photo.title
         
+        // load the image asynchronous
         loadImage(photo, imageView: cell.imageView)
         
         return cell
@@ -105,6 +122,7 @@ class PhotoListViewController: UIViewController, UICollectionViewDataSource, UIC
         
     }
     
+    // Load the page view controller responsible for loading each view controller to show title and image
     func showModal(index: Int) {
         
         photoPageViewController = PhotoPageViewController(nibName: "PhotoPageView", bundle: nil)
@@ -131,15 +149,19 @@ class PhotoListViewController: UIViewController, UICollectionViewDataSource, UIC
     
     // MARK: API Methods
     
-    func loadDataFromApi(stringToFind: String) -> Void {
+    // Method resposible for checking the Internet connection and performing the Flickr API call
+    func loadDataFromApi(stringToFind: String) {
         
+        deActivateSearchBar()
+        self.photos = []
+        self.collectionView.reloadData()
         checkConection()
         api.apiSearch(stringToFind, completion: didLoadData)
         
     }
     
-    // Callback method to received data from API call
-    func didLoadData(photos: [Photo]) -> Void {
+    // Callback method to received data from lickr API call
+    func didLoadData(photos: [Photo]) {
         
         self.photos = photos
         self.collectionView.reloadData()
@@ -183,7 +205,7 @@ extension PhotoListViewController: UIPageViewControllerDelegate {
             return nil
         }
         
-        index--
+        index -= 1
         
         return self.pageItemAtIndex(index)
     }
@@ -198,7 +220,7 @@ extension PhotoListViewController: UIPageViewControllerDelegate {
             return nil
         }
         
-        index++
+        index += 1
         
         if (index == photos!.count) {
             return nil

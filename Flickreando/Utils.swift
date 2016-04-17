@@ -9,7 +9,7 @@
 import SystemConfiguration
 import UIKit
 
-func loadImage(photo: Photo, imageView: UIImageView) -> Void {
+func loadImage(photo: Photo, imageView: UIImageView) {
     
     guard let url = NSURL(string: photo.urlLargePhotoString!) else {
         return
