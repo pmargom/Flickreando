@@ -86,6 +86,9 @@ class PhotoListViewController: UIViewController, UICollectionViewDataSource, UIC
     
     func searchBarShouldEndEditing(searchBar: UISearchBar) -> Bool {
         searchBar.showsCancelButton = false
+        if (searchBar.text == "") {
+            loadDataFromApi("")
+        }
         return true
     }
     
@@ -165,6 +168,9 @@ class PhotoListViewController: UIViewController, UICollectionViewDataSource, UIC
         
         self.photos = photos
         self.collectionView.reloadData()
+        if photos.count == 0 {
+            showAlert("No results were found.")
+        }
         
     }
 
