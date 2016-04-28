@@ -3,5 +3,5 @@
 My own iOS Swift app to consume the Flickr API.
 
 You can view a video demo at: 
-https://youtu.be/crb8lqPqfI0
+[![ own iOS Swift app to consume the Flickr API](http://i.imgur.com/WhMP7LS.png)](https://youtu.be/crb8lqPqfI0)
 
